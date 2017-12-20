@@ -16,6 +16,7 @@
 		78CD990C1FEA6574001EFF79 /* ARKITTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD990B1FEA6574001EFF79 /* ARKITTestUITests.swift */; };
 		78CD991A1FEA704A001EFF79 /* PinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD99191FEA704A001EFF79 /* PinDataModel.swift */; };
 		78CD991C1FEA730B001EFF79 /* PinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD991B1FEA730B001EFF79 /* PinViewModel.swift */; };
+		78CD991E1FEA787C001EFF79 /* PinDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		78CD990D1FEA6574001EFF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78CD99191FEA704A001EFF79 /* PinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataModel.swift; sourceTree = "<group>"; };
 		78CD991B1FEA730B001EFF79 /* PinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewModel.swift; sourceTree = "<group>"; };
+		78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				78CD99001FEA6574001EFF79 /* ARKITTestTests.swift */,
 				78CD99021FEA6574001EFF79 /* Info.plist */,
+				78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */,
 			);
 			path = ARKITTestTests;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78CD99011FEA6574001EFF79 /* ARKITTestTests.swift in Sources */,
+				78CD991E1FEA787C001EFF79 /* PinDataModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
