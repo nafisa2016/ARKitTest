@@ -60,6 +60,9 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
         
         print("tapped")
         let touchLocation = sender.location(in: mapView)
+        //
+        viewModel.touchLocation = touchLocation
+        
         let touchCoordinate = mapView.convert(touchLocation,toCoordinateFrom: mapView)
         
         //MARK: pass touch coordinate to view model
@@ -117,6 +120,18 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
     func turnOnLocation() {
         //if time permits add an alert
         print("turn on your location")
+    }
+    
+    //
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let touchLoc = viewModel.touchLocation {
+            
+            if let destinationController = segue.destination as? ARViewController {
+                
+                destinationController.touchLoc = touchLoc
+            }
+        }
     }
     
     

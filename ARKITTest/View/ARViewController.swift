@@ -13,6 +13,8 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
     
     @IBOutlet weak var sceneView: ARSCNView!
     
+    var touchLoc : CGPoint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,8 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
         // Set the scene to the view
         sceneView.scene = scene
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,9 +37,26 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         
+        sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin,ARSCNDebugOptions.showFeaturePoints]
+        
         // Run the view's session
         sceneView.session.run(configuration)
+        
+        if let touchLoc = touchLoc  {
+            
+            print(touchLoc)
+            
+            let projectedOrigin = sceneView.projectPoint(SCNVector3Zero)
+            
+            let position = SCNVector3Make(Float(touchLoc.x), Float(touchLoc.y), projectedOrigin.z)
+            let worldPoint = sceneView.unprojectPoint(position)
+            print(worldPoint)
+            createNode(position: worldPoint)
+            
+        }
+        
     }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -48,6 +69,20 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func createNode(position : SCNVector3){
+        
+        if let jellyFishScene = SCNScene(named: "art.scnassets/Jellyfish.scn") {
+            
+            if let jellyFishNode = jellyFishScene.rootNode.childNode(withName: "Jelly", recursively: false) {
+                
+                jellyFishNode.position = position
+                sceneView.scene.rootNode.addChildNode(jellyFishNode)
+            }
+        }
+    }
+    
     
     
     /*

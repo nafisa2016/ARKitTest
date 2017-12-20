@@ -14,10 +14,13 @@ class PinViewModel {
     private var pin : PinDataModel?
     weak var delegate : AddPinHandler?
     
+    var touchLocation : CGPoint?
+    
     //MARK:- create annotation from location received
     func locationTouched(title : String , coordinate: CLLocationCoordinate2D){
         //Update mapview
         delegate?.addPin(touchedPt: PinDataModel(title: title, coordinate: coordinate))
         
     }
+    
 }
