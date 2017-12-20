@@ -17,6 +17,7 @@
 		78CD991A1FEA704A001EFF79 /* PinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD99191FEA704A001EFF79 /* PinDataModel.swift */; };
 		78CD991C1FEA730B001EFF79 /* PinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD991B1FEA730B001EFF79 /* PinViewModel.swift */; };
 		78CD991E1FEA787C001EFF79 /* PinDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */; };
+		78CD99231FEA802C001EFF79 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD99221FEA802C001EFF79 /* ARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		78CD99191FEA704A001EFF79 /* PinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataModel.swift; sourceTree = "<group>"; };
 		78CD991B1FEA730B001EFF79 /* PinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewModel.swift; sourceTree = "<group>"; };
 		78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataModelTests.swift; sourceTree = "<group>"; };
+		78CD99221FEA802C001EFF79 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +106,13 @@
 			isa = PBXGroup;
 			children = (
 				78CD98EB1FEA6573001EFF79 /* AppDelegate.swift */,
-				78CD98ED1FEA6574001EFF79 /* MapViewController.swift */,
+				78CD99211FEA7B22001EFF79 /* View */,
 				78CD98EF1FEA6574001EFF79 /* Main.storyboard */,
 				78CD98F21FEA6574001EFF79 /* Assets.xcassets */,
 				78CD98F41FEA6574001EFF79 /* LaunchScreen.storyboard */,
 				78CD98F71FEA6574001EFF79 /* Info.plist */,
-				78CD99191FEA704A001EFF79 /* PinDataModel.swift */,
-				78CD991B1FEA730B001EFF79 /* PinViewModel.swift */,
+				78CD991F1FEA7B04001EFF79 /* Model */,
+				78CD99201FEA7B12001EFF79 /* ViewModel */,
 			);
 			path = ARKITTest;
 			sourceTree = "<group>";
@@ -132,6 +134,31 @@
 				78CD990D1FEA6574001EFF79 /* Info.plist */,
 			);
 			path = ARKITTestUITests;
+			sourceTree = "<group>";
+		};
+		78CD991F1FEA7B04001EFF79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78CD99191FEA704A001EFF79 /* PinDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78CD99201FEA7B12001EFF79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78CD991B1FEA730B001EFF79 /* PinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		78CD99211FEA7B22001EFF79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78CD98ED1FEA6574001EFF79 /* MapViewController.swift */,
+				78CD99221FEA802C001EFF79 /* ARViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +299,7 @@
 				78CD98EE1FEA6574001EFF79 /* MapViewController.swift in Sources */,
 				78CD98EC1FEA6573001EFF79 /* AppDelegate.swift in Sources */,
 				78CD991A1FEA704A001EFF79 /* PinDataModel.swift in Sources */,
+				78CD99231FEA802C001EFF79 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
