@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class ViewController: UIViewController {
-
+class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        mapView.delegate = self
+        mapView.setUserTrackingMode(.follow, animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {
