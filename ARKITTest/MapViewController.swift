@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol AddPinHandler : class {
+    func addPin(touchedPt: MKAnnotation) -> ()
+}
+
 class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
     
     //MARK:- outlets and declarations
@@ -18,11 +22,16 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
     let locationManager = CLLocationManager()
     var userLocation : CLLocationCoordinate2D?
     
+    lazy var viewModel = PinViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         mapView.delegate = self
         mapView.setUserTrackingMode(.follow, animated: true)
+        
+        //
+        viewModel.delegate = self
         
         //MARK: Configure location manager
         if CLLocationManager.locationServicesEnabled() {
@@ -50,6 +59,12 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
     @objc func detectTapLocation(_ sender: UITapGestureRecognizer){
         
         print("tapped")
+        let touchLocation = sender.location(in: mapView)
+        let touchCoordinate = mapView.convert(touchLocation,toCoordinateFrom: mapView)
+        
+        //MARK: pass touch coordinate to view model
+        viewModel.locationTouched(title: "", coordinate: touchCoordinate)
+        
     }
     
     
@@ -103,5 +118,13 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
     }
     
     
+}
+
+extension MapViewController : AddPinHandler {
+    
+    //MARK: Add annotation to mapview
+    func addPin(touchedPt: MKAnnotation) -> () {
+        self.mapView.addAnnotation(touchedPt)
+    }
 }
 

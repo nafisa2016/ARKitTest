@@ -14,6 +14,8 @@
 		78CD98F61FEA6574001EFF79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CD98F41FEA6574001EFF79 /* LaunchScreen.storyboard */; };
 		78CD99011FEA6574001EFF79 /* ARKITTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD99001FEA6574001EFF79 /* ARKITTestTests.swift */; };
 		78CD990C1FEA6574001EFF79 /* ARKITTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD990B1FEA6574001EFF79 /* ARKITTestUITests.swift */; };
+		78CD991A1FEA704A001EFF79 /* PinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD99191FEA704A001EFF79 /* PinDataModel.swift */; };
+		78CD991C1FEA730B001EFF79 /* PinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD991B1FEA730B001EFF79 /* PinViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		78CD99071FEA6574001EFF79 /* ARKITTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKITTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CD990B1FEA6574001EFF79 /* ARKITTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKITTestUITests.swift; sourceTree = "<group>"; };
 		78CD990D1FEA6574001EFF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78CD99191FEA704A001EFF79 /* PinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataModel.swift; sourceTree = "<group>"; };
+		78CD991B1FEA730B001EFF79 /* PinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				78CD98F21FEA6574001EFF79 /* Assets.xcassets */,
 				78CD98F41FEA6574001EFF79 /* LaunchScreen.storyboard */,
 				78CD98F71FEA6574001EFF79 /* Info.plist */,
+				78CD99191FEA704A001EFF79 /* PinDataModel.swift */,
+				78CD991B1FEA730B001EFF79 /* PinViewModel.swift */,
 			);
 			path = ARKITTest;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CD991C1FEA730B001EFF79 /* PinViewModel.swift in Sources */,
 				78CD98EE1FEA6574001EFF79 /* MapViewController.swift in Sources */,
 				78CD98EC1FEA6573001EFF79 /* AppDelegate.swift in Sources */,
+				78CD991A1FEA704A001EFF79 /* PinDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
