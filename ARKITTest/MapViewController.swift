@@ -12,6 +12,7 @@ import CoreLocation
 
 class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
     
+    //MARK:- outlets and declarations
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
@@ -33,7 +34,10 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
             locationManager.startUpdatingLocation()
         }
         
+        //MARK: Add tap gesture
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.detectTapLocation(_:)))
         
+        mapView.addGestureRecognizer(tap)
         
     }
     
@@ -41,6 +45,13 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK:- Tap gesture action
+    @objc func detectTapLocation(_ sender: UITapGestureRecognizer){
+        
+        print("tapped")
+    }
+    
     
     //MARK: Core Location
     func locationManager(_ manager: CLLocationManager,
