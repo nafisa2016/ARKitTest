@@ -125,11 +125,11 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
     //
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let touchLoc = viewModel.touchLocation {
+        if  viewModel.allTouchedLocations.count > 0 {
             
             if let destinationController = segue.destination as? ARViewController {
                 
-                destinationController.touchLoc = touchLoc
+                destinationController.allTouchLoc = viewModel.allTouchedLocations
             }
         }
     }

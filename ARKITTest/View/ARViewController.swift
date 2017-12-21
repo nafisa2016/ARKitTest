@@ -9,11 +9,17 @@
 import UIKit
 import ARKit
 
+protocol AddNodeHandler : class {
+    
+    func createNode(position : SCNVector3)
+}
+
 class ARViewController: UIViewController,ARSCNViewDelegate {
     
     @IBOutlet weak var sceneView: ARSCNView!
     
-    var touchLoc : CGPoint?
+    var allTouchLoc : [CGPoint] = []
+    lazy var nodeViewModel = NodeLocationViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +27,14 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
         // Do any additional setup after loading the view.
         // Set the view's delegate
         sceneView.delegate = self
+        nodeViewModel.delegate = self
         
         let scene = SCNScene()
         
         // Set the scene to the view
         sceneView.scene = scene
         
-        
+        sceneView.autoenablesDefaultLighting = true
         
     }
     
@@ -42,19 +49,7 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
         // Run the view's session
         sceneView.session.run(configuration)
         
-        if let touchLoc = touchLoc  {
-            
-            print(touchLoc)
-            
-            let projectedOrigin = sceneView.projectPoint(SCNVector3Zero)
-            
-            let position = SCNVector3Make(Float(touchLoc.x), Float(touchLoc.y), projectedOrigin.z)
-            let worldPoint = sceneView.unprojectPoint(position)
-            print(worldPoint)
-            createNode(position: worldPoint)
-            
-        }
-        
+        calculateWorldPosition()
     }
     
     
@@ -70,6 +65,39 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func calculateWorldPosition(){
+        if  allTouchLoc.count > 0  {
+            
+            let projectedOrigin = sceneView.projectPoint(SCNVector3Zero)
+            
+            for each in allTouchLoc {
+                
+                let position = SCNVector3Make(Float(each.x), Float(each.y), projectedOrigin.z)
+                let worldPoint = sceneView.unprojectPoint(position)
+                print("worldPoint \(worldPoint)")
+                
+                //save location to viewmodel
+                nodeViewModel.saveLocations(worldPoint: worldPoint)
+            }
+            
+            
+        }
+        
+    }
+    
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        print("ARKIT failed")
+    }
+    
+    func sessionWasInterrupted(_ session: ARSession) {
+        print("session was interrupted")
+    }
+    
+}
+
+
+
+extension ARViewController : AddNodeHandler {
     
     func createNode(position : SCNVector3){
         
@@ -82,17 +110,4 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
             }
         }
     }
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

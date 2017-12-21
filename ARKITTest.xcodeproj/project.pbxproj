@@ -19,6 +19,8 @@
 		78CD991E1FEA787C001EFF79 /* PinDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */; };
 		78CD99231FEA802C001EFF79 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD99221FEA802C001EFF79 /* ARViewController.swift */; };
 		78CD99281FEAA0D8001EFF79 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 78CD99271FEAA0D8001EFF79 /* art.scnassets */; };
+		78CD992C1FEB252F001EFF79 /* NodeLocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD992B1FEB252F001EFF79 /* NodeLocationDataModel.swift */; };
+		78CD992E1FEB25AF001EFF79 /* NodeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD992D1FEB25AF001EFF79 /* NodeLocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDataModelTests.swift; sourceTree = "<group>"; };
 		78CD99221FEA802C001EFF79 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		78CD99271FEAA0D8001EFF79 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		78CD992B1FEB252F001EFF79 /* NodeLocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeLocationDataModel.swift; sourceTree = "<group>"; };
+		78CD992D1FEB25AF001EFF79 /* NodeLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NodeLocationViewModel.swift; path = ARKITTest/NodeLocationViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				78CD99191FEA704A001EFF79 /* PinDataModel.swift */,
+				78CD992B1FEB252F001EFF79 /* NodeLocationDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				78CD991B1FEA730B001EFF79 /* PinViewModel.swift */,
+				78CD992D1FEB25AF001EFF79 /* NodeLocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,6 +307,8 @@
 			files = (
 				78CD991C1FEA730B001EFF79 /* PinViewModel.swift in Sources */,
 				78CD98EE1FEA6574001EFF79 /* MapViewController.swift in Sources */,
+				78CD992E1FEB25AF001EFF79 /* NodeLocationViewModel.swift in Sources */,
+				78CD992C1FEB252F001EFF79 /* NodeLocationDataModel.swift in Sources */,
 				78CD98EC1FEA6573001EFF79 /* AppDelegate.swift in Sources */,
 				78CD991A1FEA704A001EFF79 /* PinDataModel.swift in Sources */,
 				78CD99231FEA802C001EFF79 /* ARViewController.swift in Sources */,
