@@ -22,6 +22,8 @@
 		78CD992C1FEB252F001EFF79 /* NodeLocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD992B1FEB252F001EFF79 /* NodeLocationDataModel.swift */; };
 		78CD992E1FEB25AF001EFF79 /* NodeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD992D1FEB25AF001EFF79 /* NodeLocationViewModel.swift */; };
 		78CD99301FEB3C68001EFF79 /* NodeLocationDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD992F1FEB3C68001EFF79 /* NodeLocationDataModelTests.swift */; };
+		78CD99321FEB505F001EFF79 /* NodeLocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD99311FEB505F001EFF79 /* NodeLocationViewModelTests.swift */; };
+		78CD99341FEB5410001EFF79 /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD99331FEB5410001EFF79 /* MapViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		78CD992B1FEB252F001EFF79 /* NodeLocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeLocationDataModel.swift; sourceTree = "<group>"; };
 		78CD992D1FEB25AF001EFF79 /* NodeLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NodeLocationViewModel.swift; path = ARKITTest/NodeLocationViewModel.swift; sourceTree = SOURCE_ROOT; };
 		78CD992F1FEB3C68001EFF79 /* NodeLocationDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeLocationDataModelTests.swift; sourceTree = "<group>"; };
+		78CD99311FEB505F001EFF79 /* NodeLocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeLocationViewModelTests.swift; sourceTree = "<group>"; };
+		78CD99331FEB5410001EFF79 /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 				78CD99021FEA6574001EFF79 /* Info.plist */,
 				78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */,
 				78CD992F1FEB3C68001EFF79 /* NodeLocationDataModelTests.swift */,
+				78CD99311FEB505F001EFF79 /* NodeLocationViewModelTests.swift */,
+				78CD99331FEB5410001EFF79 /* MapViewControllerTests.swift */,
 			);
 			path = ARKITTestTests;
 			sourceTree = "<group>";
@@ -324,6 +330,8 @@
 			files = (
 				78CD99011FEA6574001EFF79 /* ARKITTestTests.swift in Sources */,
 				78CD99301FEB3C68001EFF79 /* NodeLocationDataModelTests.swift in Sources */,
+				78CD99321FEB505F001EFF79 /* NodeLocationViewModelTests.swift in Sources */,
+				78CD99341FEB5410001EFF79 /* MapViewControllerTests.swift in Sources */,
 				78CD991E1FEA787C001EFF79 /* PinDataModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

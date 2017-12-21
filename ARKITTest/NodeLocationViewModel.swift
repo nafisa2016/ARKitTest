@@ -11,7 +11,7 @@ import ARKit
 
 class NodeLocationViewModel {
     
-    private var nodeLocations : [NodeLocationDataModel]
+    var nodeLocations : [NodeLocationDataModel]
     weak var delegate : AddNodeHandler?
     
     init(){
