@@ -105,6 +105,10 @@ extension ARViewController : AddNodeHandler {
             
             if let jellyFishNode = jellyFishScene.rootNode.childNode(withName: "Jelly", recursively: false) {
                 
+                let constraint = SCNLookAtConstraint(target: sceneView.pointOfView)
+                
+                jellyFishNode.constraints = [constraint]
+                
                 jellyFishNode.position = position
                 sceneView.scene.rootNode.addChildNode(jellyFishNode)
             }
