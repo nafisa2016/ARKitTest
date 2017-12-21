@@ -21,6 +21,7 @@
 		78CD99281FEAA0D8001EFF79 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 78CD99271FEAA0D8001EFF79 /* art.scnassets */; };
 		78CD992C1FEB252F001EFF79 /* NodeLocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD992B1FEB252F001EFF79 /* NodeLocationDataModel.swift */; };
 		78CD992E1FEB25AF001EFF79 /* NodeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD992D1FEB25AF001EFF79 /* NodeLocationViewModel.swift */; };
+		78CD99301FEB3C68001EFF79 /* NodeLocationDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CD992F1FEB3C68001EFF79 /* NodeLocationDataModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		78CD99271FEAA0D8001EFF79 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		78CD992B1FEB252F001EFF79 /* NodeLocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeLocationDataModel.swift; sourceTree = "<group>"; };
 		78CD992D1FEB25AF001EFF79 /* NodeLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NodeLocationViewModel.swift; path = ARKITTest/NodeLocationViewModel.swift; sourceTree = SOURCE_ROOT; };
+		78CD992F1FEB3C68001EFF79 /* NodeLocationDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeLocationDataModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				78CD99001FEA6574001EFF79 /* ARKITTestTests.swift */,
 				78CD99021FEA6574001EFF79 /* Info.plist */,
 				78CD991D1FEA787C001EFF79 /* PinDataModelTests.swift */,
+				78CD992F1FEB3C68001EFF79 /* NodeLocationDataModelTests.swift */,
 			);
 			path = ARKITTestTests;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78CD99011FEA6574001EFF79 /* ARKITTestTests.swift in Sources */,
+				78CD99301FEB3C68001EFF79 /* NodeLocationDataModelTests.swift in Sources */,
 				78CD991E1FEA787C001EFF79 /* PinDataModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
