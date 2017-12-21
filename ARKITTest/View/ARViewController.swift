@@ -100,7 +100,7 @@ class ARViewController: UIViewController,ARSCNViewDelegate {
 extension ARViewController : AddNodeHandler {
     
     func createNode(position : SCNVector3){
-        
+        print("jelly pos \(position)")
         if let jellyFishScene = SCNScene(named: "art.scnassets/Jellyfish.scn") {
             
             if let jellyFishNode = jellyFishScene.rootNode.childNode(withName: "Jelly", recursively: false) {

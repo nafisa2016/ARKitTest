@@ -27,15 +27,15 @@ class NodeLocationViewModel {
     
     func createNodes(){
         print(nodeLocations.count)
-        for each in nodeLocations {
-            
-            guard let posX = each.position?.x , let posY = each.position?.y,
-                let posZ = each.position?.z else {
+       
+            let last = nodeLocations[nodeLocations.count - 1]
+        
+            guard let posX = last.position?.x , let posY = last.position?.y,
+                let posZ = last.position?.z else {
                     return
             }
             
             delegate?.createNode(position: SCNVector3(posX,posY,posZ))
-        }
         
     }
 }
